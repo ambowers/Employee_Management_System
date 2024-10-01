@@ -36,5 +36,19 @@ class Manager extends Employee { // use extend to inherit property from parent c
     }
 getDetails(){
     return `Employee ${this.name} works as a ${this.position} earning an annual salary of $${this.salary} with a bonus of $${this.bonus}.`
+    };
+};
+
+// Task 4 handle bonuses for managers
+
+calculateTotalSalaryWithBonus () {
+   let total =0;
+   for (const employee of this.employees){
+    if (employee instanceof Manager){ // instanceof "to know whether an object was derived from a specific class" - textbk
+        total += employee.salary + employee.bonus;
+    } else {
+        total += employee.salary
     }
 }
+return total;
+};
