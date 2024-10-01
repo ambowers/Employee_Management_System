@@ -27,3 +27,14 @@ getDepartmentSalary () {
     } // returns total salary of all employees in the department
 };
 
+// Task 3 create a manager class that inherits from employee
+
+class Manager extends Employee { // use extend to inherit property from parent class
+    constructor(name, salary, position, department, bonus) {
+        super(name, salary, position, department);//call parent constructor
+        this.bonus = bonus; // new property
+    }
+getDetails(){
+    return `Employee ${this.name} works as a ${this.position} earning an annual salary of $${this.salary} with a bonus of $${this.bonus}.`
+    }
+}
