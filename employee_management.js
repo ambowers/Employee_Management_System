@@ -52,3 +52,23 @@ calculateTotalSalaryWithBonus () {
 }
 return total;
 };
+
+// Task 5 create and manage departments and employees
+
+const engineering = new Department("Engineering");
+const marketing = new Department("Marketing");
+
+const caiden = new Employee("Caiden", 1000000, "Lead Engineer","Engineering");
+const johnathan = new Employee("Johnathan", 100000, "Assistant Engineer", "Engineering");
+const bryan = new Manager("Bryan", 500000, "Engineering Manager", "Engineering");
+
+const lina = new Employee("Lina", 150000, "Marketing Analyst", "Marketing");
+const michaela = new Manager("Michaela", 100000, "Public Relations Manager", "Marketing");
+
+engineering.addEmployee(caiden);
+engineering.addEmployee(johnathan);
+engineering.addEmployee(bryan);
+
+marketing.addEmployee(lina);
+marketing.addEmployee(michaela);
+
